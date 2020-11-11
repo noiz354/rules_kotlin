@@ -4,6 +4,7 @@ load("@bazel_skylib//rules:build_test.bzl", "build_test")
 # An app that consumes android-kt deps
 android_binary(
     name = "app",
+    srcs = glob(["src/main/kotlin/**/*.java"]),
     custom_package = "examples.android.app",
     incremental_dexing = 0,
     manifest = "src/main/AndroidManifest.xml",
