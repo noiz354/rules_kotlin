@@ -2,8 +2,8 @@ load("@io_bazel_rules_kotlin//kotlin:kotlin.bzl", "kt_android_library")
 
 kt_android_library(
     name = "lib3",
-#    srcs = glob(["src/main/java/**/*.kt", "src/main/java/**/*.java"]),
-    srcs = glob(["src/main/java/**/*.kt"]),
+    srcs = glob(["src/main/java/**/*.kt", "src/main/java/**/*.java"]),
+#    srcs = glob(["**/*.kt"]),
     custom_package = "com.tokopedia.utils",
     manifest = "src/main/AndroidManifest.xml",
     visibility = ["//visibility:public"],
