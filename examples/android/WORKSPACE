@@ -69,19 +69,20 @@ local_repository(
 load("@io_bazel_rules_kotlin//kotlin:dependencies.bzl", "kt_download_local_dev_dependencies")
 kt_download_local_dev_dependencies()
 
-load("@io_bazel_rules_kotlin//kotlin:kotlin.bzl", "kotlin_repositories", "define_kt_toolchain")#//"kt_register_toolchains")
-define_kt_toolchain(
-    name = "norman_kotlin_toolchain",
-    api_version = "1.4",
-    jvm_target = "1.8",
-    language_version = "1.4"
-)
-register_toolchains("//:norman_kotlin_toolchain")
+load("@io_bazel_rules_kotlin//kotlin:kotlin.bzl", "kotlin_repositories")
 
-kotlin_repositories()
+KOTLIN_CURRENT_COMPILER_RELEASE = {
+    "urls": [
+        "https://github.com/JetBrains/kotlin/releases/download/v1.4.0/kotlin-compiler-1.4.0.zip",
+    ],
+    "sha256": "590391d13b3c65ba52cba470f56efd5b14e2b1f5b9459f63aa12eb38ef52f161",
+}
+
+kotlin_repositories(KOTLIN_CURRENT_COMPILER_RELEASE)
 
 #kt_register_toolchains()
 
+register_toolchains("//:norman_kotlin_toolchain")
 
 # Skylib, for build_test, so don't bother initializing the unit test infrastructure.
 http_archive(
