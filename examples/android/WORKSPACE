@@ -13,6 +13,24 @@ http_archive(
 
 load("@rules_jvm_external//:defs.bzl", "maven_install")
 
+unifyIconVersion = "0.0.4"
+unifyIconsVersion = '1.0.0'
+unifyPrinciplesVersion = '1.3.2'
+unifyComponentsVersion = '1.1.50'
+unifyCoachMarkVersion = '1.2.6'
+unifyCalendarVersion = '1.0.2'
+unifyBannerVersion = '1.0.4'
+unifyDialogVersion = '1.0.5'
+unifyDatePickerVersion = '1.0.6'
+unifyPinVersion = '1.0.3'
+unifyEmptyStateVersion = '1.0.6-beta-1'
+unifyGlobalErrorVersion = '1.0.9'
+unifyHeaderVersion = '1.1.4'
+unifySortFilterVersion = '1.0.4'
+unifyIconNotificationVersion = '1.0.0'
+unifyCarouselVersion = '1.0.4'
+unifyListVersion = '1.0.5'
+
 maven_install(
     artifacts = [
         "androidx.appcompat:appcompat:1.0.0",
@@ -27,6 +45,23 @@ maven_install(
         "junit:junit:4.12",
         "androidx.test.espresso:espresso-core:3.1.1",
         "org.hamcrest:hamcrest-library:1.3",
+        "com.tokopedia.unify:icon:"+unifyIconVersion,
+        "com.tokopedia.unify:principles:"+unifyPrinciplesVersion,
+        "com.tokopedia.unify:components:"+unifyComponentsVersion,
+        "com.tokopedia.unify.compositions:coach_mark:"+unifyCoachMarkVersion,
+        "com.tokopedia.unify.compositions:calendar:"+unifyCalendarVersion,
+        "com.tokopedia.unify.compositions:banner:"+unifyBannerVersion,
+        "com.tokopedia.unify.compositions:dialog:"+unifyDialogVersion,
+        "com.tokopedia.unify.compositions:datepicker:"+unifyDatePickerVersion,
+        "com.tokopedia.unify.compositions:empty_state:"+unifyEmptyStateVersion,
+        "com.tokopedia.unify.compositions:pin:"+unifyPinVersion,
+        "com.tokopedia.unify.compositions:global_error:"+unifyGlobalErrorVersion,
+        "com.tokopedia.unify.compositions:list:"+unifyListVersion,
+        "com.tokopedia.unify.compositions:header:"+unifyHeaderVersion,
+        "com.tokopedia.unify.compositions:icon_notification:"+unifyIconNotificationVersion,
+        "com.tokopedia.unify.compositions:sort_filter:"+unifySortFilterVersion,
+        "com.tokopedia.unify.compositions:carousel:"+unifyCarouselVersion,
+        "com.tokopedia.unify:icons:"+unifyIconsVersion,
 
         # Annotation processors
         "androidx.lifecycle:lifecycle-compiler:2.0.0",
@@ -37,6 +72,8 @@ maven_install(
         "https://jcenter.bintray.com/",
         "https://maven.google.com",
         "https://repo1.maven.org/maven2",
+        "http://apps:tokopedia789@10.164.4.52:8081/artifactory/libs-release-local",
+        'https://maven-hansel.tokopedia.com/maven'
     ],
 )
 
