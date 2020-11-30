@@ -73,8 +73,10 @@ maven_install(
         "https://maven.google.com",
         "https://repo1.maven.org/maven2",
         "http://apps:tokopedia789@10.164.4.52:8081/artifactory/libs-release-local",
-        'https://maven-hansel.tokopedia.com/maven'
+        'https://maven-hansel.tokopedia.com/maven',
+        'https://hansel.io/maven'
     ],
+    fail_on_missing_checksum = False,
 )
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
