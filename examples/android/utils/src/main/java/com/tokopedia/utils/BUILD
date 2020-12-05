@@ -8,7 +8,7 @@ kt_android_library(
     visibility = ["//visibility:public"],
     resource_files = glob(['res/**']),    
     deps = [
-#        "@maven//:androidx_appcompat_appcompat",
+        "@maven//:androidx_appcompat_appcompat",
         ":androidx_room_room_compiler_library",
         "@maven//:com_tokopedia_unify_principles",
         "@maven//:com_tokopedia_unify_components",
