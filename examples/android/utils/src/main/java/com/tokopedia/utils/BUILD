@@ -10,6 +10,7 @@ kt_android_library(
     deps = [
         "@maven//:androidx_appcompat_appcompat",
         ":androidx_room_room_compiler_library",
+        "@maven//:androidx_room_room_runtime",
         "@maven//:com_tokopedia_unify_principles",
         "@maven//:com_tokopedia_unify_components",
         "@maven//:com_tokopedia_unify_compositions_dialog"
