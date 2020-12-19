@@ -6,7 +6,10 @@ kt_android_library(
     custom_package = "com.tokopedia.utils",
     manifest = "AndroidManifest.xml",
     visibility = ["//visibility:public"],
-    resource_files = glob(['res/**']),    
+    resource_files = glob(['res/**']),
+    assets = ["schemas"],
+    javacopts = ['-g:lines,source'],
+    assets_dir = "schemas",
     deps = [
         "@maven//:androidx_appcompat_appcompat",
         ":androidx_room_room_compiler_library",
@@ -22,6 +25,7 @@ android_binary(
     custom_package = "com.tokopedia.utils",
     manifest = "AndroidManifest.xml",
     visibility = ["//visibility:public"],
+    javacopts = ['-g:lines,source'],
     resource_files = glob(['res/**']),    
     deps = [
         ":lib3",
@@ -38,6 +42,10 @@ java_plugin(
     deps = [
         "@maven//:androidx_room_room_compiler",
     ],
+    features = [
+        "room.schemaLocation",
+        "schemas"
+    ]
 )
 
 java_library(
